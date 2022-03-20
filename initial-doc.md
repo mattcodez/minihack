@@ -5,10 +5,11 @@ if(expr, then(), else())
 - Optional typing with hungarian notation?
 s_name
 - May consider having multiple editions of the language. Like a minihack and microhack. The micro would have even smaller coding constraints in order to minimize typing and maximize screen utilization. Would likely have reduced readability though.
+- Maybe operator overloading but I think that would require strict typing which greatly increases verbosity
 
 Principals:
 - Need to limit indenting. But that is very valuable to programmers. How can this be done? Just force limited nesting? No function past two levels deep? Or no indenting but you're basically writing assembly at that point.
-- Explicit typing, I hate not knowing where something is coming from. Maybe it’s ok with an IDE but this needs to be useable without an IDE
+- Explicit typing, I hate not knowing where variables are coming from. Maybe it’s ok with an IDE but this needs to be useable without an IDE
 - Optimize for average mobile keyboard layout, don’t force user to switch between keyboard types all the time
 - Symbols limited to , and . which is weak
 - Perhaps use mostly characters on other screen and optimize for user not switching back?
