@@ -1,30 +1,38 @@
-Grammar:
+# Grammar
+This eventually will be the valid grammar definition for the language. Right now I'm mainly just discussing syntax with myself and trying to make decisions.
+
+## Thoughts
 - Probably get rid of semi-colons to save space
 - Even not making it optional for multiple statements on a single line, want to maximize vertical screen use as much as possible
-- Sugar for return statement (maybe just <= 1,2,3
+- Sugar for return statement
+    - Inverse the function entry syntax
+    ` <= 1,2,3 `
+## Syntax
 
-Functions
-Don’t see a reason for both declared and expressions, just use a variable if you want it named
+### Rules
+### Functions
+Don’t see a reason for both declared and expression types, just use a variable if you want it named (so, expressions only)
 ([args]) => statement
 ([args]) => {[statement,...]}
 
 Statement
 {block} | statement
 
-
-
 Block
 {[statement,...]}
 
+### Operators
 
+### Comments
 
+### Examples
 Running major example 1
 <c, p> from ‘system’
 
 main = () = > {
   c.log(‘started’)
   d = if(p.args[1] == ‘yes’
-     begin^p.args[2]
+     begin^p.args[2] // we don't have closures so use ^ to curry parameters
      end
   )
   <= d
@@ -32,7 +40,7 @@ main = () = > {
 
 end = ‘junk’
 
-Begin = (v) =>
+begin = (v) =>
   // loop over each number in string and add together
   // can only loop arrays maybe but add sugar for easy range creation
   total = 0
